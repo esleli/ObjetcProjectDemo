@@ -21,6 +21,10 @@ public class Staff {
         System.out.println("Calculando el salario...");
     }
 /* Método que calcula el salario cuando no hay bonus */
+    /**
+     * Calcula el salario cuando no hay bonos.
+     * @return int ,en caso de no trabajar ninguna hora -1.
+     */
     public int calculatePay()
     {
         printMessage();
@@ -31,7 +35,13 @@ public class Staff {
         else
             return -1;
     }
-    /* Método que calcula es salario cuando hay bonus*/
+    /**
+     * Calcula el salario cuando hay bonos.
+     * @param bonus Bono a sumar.
+     * @param allowance La paga a sumar.
+     * @return el salario a cobrar.
+     */
+    
     public int calculatePay(int bonus, int allowance)
     {
         printMessage();
