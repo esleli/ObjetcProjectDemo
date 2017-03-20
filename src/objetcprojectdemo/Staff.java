@@ -12,9 +12,9 @@ package objetcprojectdemo;
  */
 public class Staff {
 /* Declaración de variables privadas de la clase*/
-    private String NameOfStaff;
-    private final int hourlyRate = 30;
-    private int hoursWorked;
+    private String NombreEmpleado;
+    private final int RatioHora = 30;
+    private int HorasTrabajadas;
  /* Metodo que visualiza el mensaje "Calculando el salario..."*/   
     public void printMessage()
     { 
@@ -29,8 +29,8 @@ public class Staff {
     {
         printMessage();
         int staffPay;
-        staffPay = hourlyRate * hoursWorked;
-        if (hoursWorked > 0)
+        staffPay = RatioHora * HorasTrabajadas;
+        if (HorasTrabajadas > 0)
             return staffPay;
         else
             return -1;
@@ -45,25 +45,25 @@ public class Staff {
     public int calculatePay(int bonus, int allowance)
     {
         printMessage();
-        if (hoursWorked>0)
-            return hoursWorked * hourlyRate + bonus + allowance;
+        if (HorasTrabajadas>0)
+            return HorasTrabajadas * RatioHora + bonus + allowance;
         else
             return 0;
     }
    /* Mértodo setter que verifica que horas trabajadas es mayor que cero */
-    public void setHoursWorked(int hours)
+    public void setHorasTrabajadas(int hours)
     {
         if (hours > 0)
-            hoursWorked = hours;
+            HorasTrabajadas = hours;
         else {
             System.out.println("-Error: HoursWorked Cannot be Smaller than zero");
             System.out.println("-Error: HoursWorked is not updated");
             }          
     }
     /* Método getter para asignar valores a horas trabajadas */
-    public int getHoursWorked()
+    public int getHorasTrabajadas()
     {
-        return hoursWorked;
+        return HorasTrabajadas;
     }
     /* Constructores crean  objetos Staff */
     public Staff(String name)
